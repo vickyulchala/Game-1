@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest Run - Endless Runner Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Main Game Title -->
+    <header>
+        <h1>🌲 Forest Run 🌲</h1>
+        <p class="tagline">Dodge, jump, and run through the endless forest!</p>
+    </header>
+
+    <!-- Game Container with Score and Loading Screen -->
+    <div id="game-container">
+        <!-- Loading screen -->
+        <div id="loading-screen">
+            <p>Loading... Please wait</p>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+
+        <!-- Game canvas populated by Phaser -->
+        <div id="phaser-game"></div>
+
+        <!-- UI elements inside the game container -->
+        <div class="score">Score: 0</div>
+        <div class="powerup-alert">Power-Up Active!</div>
+    </div>
+
+    <!-- Buttons -->
+    <button class="button" id="start-game-button" onclick="startGame()">Start Game</button>
+    <button class="button" id="reset-game-button" onclick="resetGame()">Reset Game</button>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Forest Run. All rights reserved.</p>
+        <p>Developed by [Your Name]</p>
+    </footer>
+
+    <!-- JavaScript for Phaser and Game Logic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.55.2/phaser.min.js"></script>
+    <script src="game.js"></script>
+    <script>
+        // JavaScript to control loading and UI interactions
+        function startGame() {
+            document.getElementById("loading-screen").style.display = "none";
+            // Additional start game logic if necessary
+        }
+
+        function resetGame() {
+            location.reload();
+        }
+    </script>
+</body>
+</html>
